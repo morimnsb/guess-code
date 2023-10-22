@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>PassGame</title>
+    
+</head>
+<body>
+  
+  
+    <div class="container shadow-lg  text-center  " id="main">
+
+        <div class="message">
+          <h1 class="h1">How many 4-digit PIN codes are there?</h1>
+          <p class="h3">Use <strong>Coin</strong> to start</p>
+        </div>
+
+        <div class="container help">
+          <h2 class="h2">help: </h2><h2 class="helpMessage">do this...</h2>
+        </div>
+
+        <!-- screen to show the numbers -->
+        <div class="display row justify-content-around" >  
+            <p class="monitor col-2 border border-secondary rounded m-2 fs-2  ">?</p>
+            <p class="monitor col-2 border border-secondary rounded m-2 fs-2">?</p>
+            <p class="monitor col-2 border border-secondary rounded m-2 fs-2">?</p>
+            <p class="monitor col-2 border border-secondary text-center rounded m-2 fs-2">?</p>
+        </div>
+
+        <!-- keyboard for get numbers -->
+        <div class="row justify-content-center  ">
+          
+            <button type="button" onclick="startGame(this)" id = "1" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2 " >1</button>
+            <button type="button" onclick="startGame(this)" id = "2" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4  fs-2">2</button>
+            <button type="button" onclick="startGame(this)" id = "3" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2" >3</button>
+            <button type="button" onclick="startGame(this)" id = "4" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2 ">4</button>
+            <button type="button" onclick="startGame(this)" id = "5" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">5</button>
+            <button type="button" onclick="startGame(this)" id = "6" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">6</button>
+            <button type="button" onclick="startGame(this)" id = "7" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2 ">7</button>
+            <button type="button" onclick="startGame(this)" id = "8" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">8</button>
+            <button type="button" onclick="startGame(this)" id = "9" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">9</button>
+            
+            <button type="button" onclick="startGame(this)" id = "*" class="keyboard-btn btn btn-info btn-lg border border-3 col-4 fs-2 ">*</button>
+            <button type="button" onclick="startGame(this)" id = "0" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">0</button>
+            <button type="button" onclick="startGame(this)" id = "#" class="keyboard-btn btn btn-info btn-lg border border-3 col-4 fs-2">#</button>   
+      </div>
+
+      <!-- Coins section -->
+      <div class=" coin-box border border-danger  ">
+          <div class="coin " id="111"  onclick="startGame(this)"></div> 
+          <div class="coin " id="222"  onclick="startGame(this)"></div> 
+          <div class="coin " id="333"  onclick="startGame(this)"></div>
+          <div class="coin " id="444"  onclick="startGame(this)"></div> 
+          <div class="coin " id="555"  onclick="startGame(this)"></div> 
+          <div class="coin " id="666"  onclick="startGame(this)"></div>
+      </div>
+
+      <!-- start and restart buttons -->
+     
+      <button type="button" class="btn btn-primary btn-lg" onclick="startGame(this)" id="1000">Start</button>
+      <button type="button" class="btn btn-primary btn-lg" onclick="resetGame(this)" id="2000">Restart</button>
+    </div>
+    
+    
+    
+      <!-- scripts files -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body {
+  background: linear-gradient(
+    43deg,
+    #e4cece 0%,
+    #8a7adc 40%,
+    rgba(255, 0, 208, 0.7) 80%
+  );
+}
+
+#main {
+  border: 5vw solid rgba(177, 42, 116, 0.3);
+  margin-top: 50px;
+}
+
+.help {
+  background-color: #a62daaa4;
+  display: flex;
+  justify-content: space-around;
+}
+
+.monitor {
+  background: linear-gradient(
+    43deg,
+    #e4cece 0%,
+    #eb2106 40%,
+    rgba(158, 87, 29, 0.7) 80%
+  );
+}
+
+.coin-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.coin {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform: rotate(45deg);
+  background-color: red;
+}
+
+.coin {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(236, 183, 8, 0.836);
+}
+
+.coin:hover {
+  background-color: green;
+}
