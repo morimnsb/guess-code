@@ -1,15 +1,15 @@
 // Variables
-let TrueGuess = 0;
-let cpuNumbers =[];
-var visual_monitor_list = [];
-let index_Monitor=0;
-let index_visual_coin = 0;
+let trueGuess = 0;
+let cpuNumbers = [];
+let visualMonitorList = [];
+let indexMonitor = 0;
+let indexVisualCoin = 0;
 let Coins = 6;
 
-const monitor = document.getElementsByClassName("monitor");
-let coin = document.getElementsByClassName("coin");
-let Game_status = false;
-let b_value;
+const MONITOR = document.getElementsByClassName("monitor");
+const COIN = document.getElementsByClassName("coin");
+let gameStatus = false;
+let btnValue;
 
 
 makeCpuNumbers()
@@ -20,7 +20,7 @@ function makeCpuNumbers(){
         x = parseInt(x)
         // to not make a duplicate number
         if (cpuNumbers.includes(x)){
-          i-=1;
+          i--;
         }
         else
           cpuNumbers.push(x);
@@ -33,21 +33,21 @@ function makeCpuNumbers(){
 // active just by start or Coins buttons
 function startGame(button){
     
-    b_value = parseInt(button.id);
-    if (b_value < 10 & Game_status) {
+    btnValue = parseInt(button.id);
+    if (btnValue < 10 & gameStatus) {
           // check if de desk ready is
-        if (visual_monitor_list.length < 4){
+        if (visualMonitorList.length < 4){
             // push new input into list
-            visual_monitor_list.push(b_value) ;
+            visualMonitorList.push(btnValue) ;
             //  print new input in screen
-            monitor[index_Monitor].innerHTML = visual_monitor_list[visual_monitor_list.length - 1];
+            MONITOR[indexMonitor].innerHTML = visualMonitorList[visualMonitorList.length - 1];
         
             // green statement
-            if ( visual_monitor_list[index_Monitor] === cpuNumbers[index_Monitor]){
-            monitor[index_Monitor].style.background = "green" ;
-            TrueGuess++
+            if ( visualMonitorList[indexMonitor] === cpuNumbers[indexMonitor]){
+              MONITOR[indexMonitor].style.background = "green" ;
+            trueGuess++
 
-                if (TrueGuess === 4){
+                if (trueGuess === 4){
                   setTimeout(() => {
                     alert("WE have a winner!");
                   }, 20);
@@ -55,18 +55,18 @@ function startGame(button){
                 }
             }
             //  yellow statement
-            else if (cpuNumbers.includes(visual_monitor_list[visual_monitor_list.length -1])){
-              monitor[index_Monitor].style.background = "yellow" ;
+            else if (cpuNumbers.includes(visualMonitorList[visualMonitorList.length -1])){
+              MONITOR[indexMonitor].style.background = "yellow";
           
             }
 
               // red statement
             else {
-            monitor[index_Monitor].style.background = "red" ;
+              MONITOR[indexMonitor].style.background = "red";
             }
           
-            index_Monitor += 1 ; 
-            if(index_Monitor ===4 & TrueGuess != 4){
+            indexMonitor ++; 
+            if(indexMonitor ===4 & trueGuess != 4){
                 if (Coins > 0) {
                   setTimeout(() => {
                   alert("noch!!!!"),prepareDesk();
@@ -80,31 +80,31 @@ function startGame(button){
                 }
                 
             }     
-            else if(index_Monitor ===4 & TrueGuess === 4){ 
+            else if(indexMonitor === 4 & trueGuess === 4){ 
               resetGame(); 
             }
         }  
     }    
-    else if (b_value < 10 & !Game_status) {
+    else if (btnValue < 10 & !gameStatus) {
         alert("press start or coins");
     }
     
-    if (b_value > 10 & !Game_status) {
+    if (btnValue > 10 & !gameStatus) {
       
           // ask coin!!!
         if (Coins > 0 ){
-        // use a coin to active game_status
-          Coins -= 1;
-          coin[index_visual_coin].style.background = "blue" ;
-          Game_status = true ;
-        // active monitor 
-          monitor[0].style.background = "white" ;
-          monitor[1].style.background = "white" ;
-          monitor[2].style.background = "white" ;
-          monitor[3].style.background = "white" ;
+        // use a coin to active gameStatus
+          Coins --;
+          COIN[indexVisualCoin].style.background = "blue";
+          gameStatus = true;
+        // active MONITOR 
+          MONITOR[0].style.background = "white";
+          MONITOR[1].style.background = "white";
+          MONITOR[2].style.background = "white";
+          MONITOR[3].style.background = "white";
 
         // ready for next round
-        index_visual_coin +=1;
+        indexVisualCoin ++;
         }
             //  check is have coin to continue
         else {
@@ -118,7 +118,7 @@ function startGame(button){
         }
     } 
     // do not spend extra coin
-    else if(b_value > 10 & Game_status){
+    else if(btnValue > 10 & gameStatus){
       alert("guess the pin");
     }   
 }
@@ -126,44 +126,44 @@ function startGame(button){
 //  this function resets the game completely
 function resetGame() {
 
-  coin[0].style.background = "red"
-  coin[1].style.background = "red"
-  coin[2].style.background = "red"
-  coin[3].style.background = "red"
-  coin[4].style.background = "red"
-  coin[5].style.background = "red"
+  COIN[0].style.background = "red";
+  COIN[1].style.background = "red";
+  COIN[2].style.background = "red";
+  COIN[3].style.background = "red";
+  COIN[4].style.background = "red";
+  COIN[5].style.background = "red";
 
-  monitor[0].style.background = "red" ;
-  monitor[1].style.background = "red" ;
-  monitor[2].style.background = "red" ;
-  monitor[3].style.background = "red" ;
+  MONITOR[0].style.background = "red";
+  MONITOR[1].style.background = "red";
+  MONITOR[2].style.background = "red";
+  MONITOR[3].style.background = "red";
 
-  monitor[0].innerHTML ="?"
-  monitor[1].innerHTML ="?"
-  monitor[2].innerHTML ="?"
-  monitor[3].innerHTML ="?"
+  MONITOR[0].innerHTML ="?";
+  MONITOR[1].innerHTML ="?";
+  MONITOR[2].innerHTML ="?";
+  MONITOR[3].innerHTML ="?";
 
-  Coins =6;
-  Game_status = false;
-  index_visual_coin = 0;
-  TrueGuess=0;
-  cpuNumbers=[];
+  Coins = 6;
+  gameStatus = false;
+  indexVisualCoin = 0;
+  trueGuess = 0;
+  cpuNumbers= [];
   makeCpuNumbers();
   
-  visual_monitor_list = [];
-  index_Monitor = 0;
+  visualMonitorList = [];
+  indexMonitor = 0;
 }
 
 //  this function prepare the round game
 function prepareDesk(){
-  monitor[0].style.background = "white" ;
-  monitor[1].style.background = "white" ;
-  monitor[2].style.background = "white" ;
-  monitor[3].style.background = "white" ;
-  TrueGuess=0;
-  visual_monitor_list = [];
-  index_Monitor = 0;
-  Game_status = false;
+  MONITOR[0].style.background = "white";
+  MONITOR[1].style.background = "white";
+  MONITOR[2].style.background = "white";
+  MONITOR[3].style.background = "white";
+  trueGuess = 0;
+  visualMonitorList = [];
+  indexMonitor = 0;
+  gameStatus = false;
 }
 
 

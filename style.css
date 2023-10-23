@@ -10,17 +10,15 @@ body {
     #8a7adc 40%,
     rgba(255, 0, 208, 0.7) 80%
   );
-  background-repeat: no-repeat;
-  width: 90vw;
-  margin: 0 auto;
-
+  
 }
 
 #main {
+  display: flexbox;
   border: 5vw solid rgba(177, 42, 116, 0.3);
   margin-top: 25px;
   margin-bottom: 25px;
-  /* margin: auto; */
+ 
 }
 
 .help {
