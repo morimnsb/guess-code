@@ -18,8 +18,9 @@ body {
 
 #main {
   border: 5vw solid rgba(177, 42, 116, 0.3);
-  margin-top: 50px;
- 
+  margin-top: 25px;
+  margin-bottom: 25px;
+  /* margin: auto; */
 }
 
 .help {
@@ -41,14 +42,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.coin {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  transform: rotate(45deg);
-  background-color: red;
+  background-color: #8a7adc;
 }
 
 .coin {

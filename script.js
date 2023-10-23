@@ -69,7 +69,7 @@ function startGame(button){
             if(index_Monitor ===4 & TrueGuess != 4){
                 if (Coins > 0) {
                   setTimeout(() => {
-                  alert("noch!!!!"),miniReset();
+                  alert("noch!!!!"),prepareDesk();
                 }, 20);
                   
                 } else {
@@ -154,8 +154,8 @@ function resetGame() {
   index_Monitor = 0;
 }
 
-//  this function resets the round game
-function miniReset(){
+//  this function prepare the round game
+function prepareDesk(){
   monitor[0].style.background = "white" ;
   monitor[1].style.background = "white" ;
   monitor[2].style.background = "white" ;
