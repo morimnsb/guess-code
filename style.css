@@ -16,26 +16,29 @@ body {
 }
 
 #main {
-  display: flexbox;
+  display: flex;
+  flex-direction: column;
   border: 5vw solid rgba(177, 42, 116, 0.3);
   margin-top: 25px;
   margin-bottom: 25px;
- 
 }
 
-.help {
-  background-color: #a62daaa4;
+.guide {
+  height: 150px;
+  background-color: #f8f2f8a4;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .monitor {
   background: linear-gradient(
     43deg,
-    #e4cece 0%,
-    #eb2106 40%,
-    rgba(158, 87, 29, 0.7) 80%
+    #e93131 20%,
+    #ddc6c3 40%,
+    rgba(236, 75, 75, 0.7) 80%
   );
+  height: 100px;
 }
 
 .coin-box {

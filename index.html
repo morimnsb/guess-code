@@ -12,16 +12,7 @@
 <body>
   
   
-    <div class="container shadow-lg h-25 text-center  " id="main">
-
-        <div class="message">
-          <h3 class="h3">How many 4-digit PIN codes are there?</h3>
-          <p class="h3">Use <strong>Coin</strong> to start</p>
-        </div>
-
-        <div class="container help">
-          <h2 class="h2">help: </h2><h2 class="helpMessage">do this...</h2>
-        </div>
+    <div class="container shadow-lg h-25 text-center  " id="main">    
 
         <!-- screen to show the numbers -->
         <div class="display row justify-content-around" >  
@@ -30,9 +21,11 @@
             <p class="monitor col-2 border border-secondary rounded m-2 fs-2">?</p>
             <p class="monitor col-2 border border-secondary text-center rounded m-2 fs-2">?</p>
         </div>
-
+        <div class="guide">
+          <div></div>
+        </div>
         <!-- keyboard for get numbers -->
-        <div class="row justify-content-center  ">
+        <div class="keyBoard row justify-content-center  ">
           
             <button type="button" onclick="startGame(this)" id = "1" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2 " >1</button>
             <button type="button" onclick="startGame(this)" id = "2" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4  fs-2">2</button>
