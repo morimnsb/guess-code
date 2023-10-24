@@ -16,8 +16,7 @@ body {
 }
 
 #main {
-  display: flex;
-  flex-direction: column;
+  display: flexbox;
   border: 5vw solid rgba(177, 42, 116, 0.3);
   margin-top: 25px;
   margin-bottom: 25px;
