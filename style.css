@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/*Just testing the pull request  */
+
 body {
   background: linear-gradient(
     43deg,
@@ -20,14 +20,22 @@ body {
   border: 5vw solid rgba(177, 42, 116, 0.3);
   margin-top: 25px;
   margin-bottom: 25px;
+  
 }
-
+.keyboard{
+  min-height: fit-content;
+  
+}
+.keyboard-btn{
+  height: 10vh;
+}
 .guide {
   height: 150px;
   background-color: #f8f2f8a4;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 20vh;
 }
 
 .monitor {
@@ -37,7 +45,7 @@ body {
     #ddc6c3 40%,
     rgba(236, 75, 75, 0.7) 80%
   );
-  height: 100px;
+  height: 10vh;
 }
 
 .coin-box {

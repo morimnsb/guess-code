@@ -103,14 +103,21 @@ function startGame(button){
           COIN[indexVisualCoin].style.background = "blue";
           gameStatus = true;
         // active MONITOR 
-          MONITOR[0].style.background = "white";
-          MONITOR[1].style.background = "white";
-          MONITOR[2].style.background = "white";
-          MONITOR[3].style.background = "white";
+          for (let item of MONITOR) {
+          item.style.background = "white";
+          }
 
+          // MONITOR.forEach(function(item){
+          //   item.style.background = "white";
+          // })
+
+          // MONITOR.map(function(item) {
+          //   item.style.background = "white";
+          // });
         // ready for next round
         indexVisualCoin ++;
         showMessage(2)
+
         }
             //  check if have coin to continue
             // if win ask to restart
@@ -131,23 +138,18 @@ function startGame(button){
 
 //  this function resets the game completely
 function resetGame() {
-
-  COIN[0].style.background = "red";
-  COIN[1].style.background = "red";
-  COIN[2].style.background = "red";
-  COIN[3].style.background = "red";
-  COIN[4].style.background = "red";
-  COIN[5].style.background = "red";
-
-  MONITOR[0].style.background = "red";
-  MONITOR[1].style.background = "red";
-  MONITOR[2].style.background = "red";
-  MONITOR[3].style.background = "red";
-
-  MONITOR[0].innerHTML ="?";
-  MONITOR[1].innerHTML ="?";
-  MONITOR[2].innerHTML ="?";
-  MONITOR[3].innerHTML ="?";
+  for (let item of COIN) {
+    item.style.background = "red";
+  }
+ 
+  for (let item of MONITOR) {
+    item.style.background = "red";
+  }
+  
+  for (let item of MONITOR) {
+    item.innerHTML ="?";
+  }
+ 
 
   Coins = 6;
   gameStatus = false;
@@ -163,10 +165,10 @@ function resetGame() {
 
 //  this function prepare the round game
 function prepareDesk(){
-  MONITOR[0].style.background = "white";
-  MONITOR[1].style.background = "white";
-  MONITOR[2].style.background = "white";
-  MONITOR[3].style.background = "white";
+  for (let item of MONITOR) {
+    item.style.background = "white";
+  }
+  
   trueGuess = 0;
   visualMonitorList = [];
   indexMonitor = 0;
@@ -175,47 +177,55 @@ function prepareDesk(){
 }
 // this function guides the player 
 function showMessage(message){
-  if(message===1){
-    GUIDE.lastElementChild.innerHTML="<h1>Press Start</h1>";
-    GUIDE.style.background = "#f8f2f8a4";
+  switch (message) {
+    case 1:
+      GUIDE.lastElementChild.innerHTML="<h1>Press Start</h1>";
+      GUIDE.style.background = "#f8f2f8a4";
+      break;
 
+      case 2:
+        GUIDE.lastElementChild.innerHTML="<h1>Enter your guess number</h1>";
+      break;
+
+      case 3:
+        GUIDE.lastElementChild.innerHTML="<h1>Correct number BUT wrong place</h1>";
+        GUIDE.style.background = "yellow";
+      break;
+
+      case 4:
+        GUIDE.lastElementChild.innerHTML="<h1>Wrong number </h1>";
+        GUIDE.style.background = "red";
+      break;
+      
+      case 5:
+        GUIDE.lastElementChild.innerHTML="<h1>Correct number AND Correct place</h1>";
+        GUIDE.style.background = "green";
+      break;
+
+      case 6:
+        GUIDE.lastElementChild.innerHTML="<h1>WE have a winner!</h1>";
+        GUIDE.style.background = "gold";
+      break;
+
+      case 7:
+        GUIDE.lastElementChild.innerHTML="<h1>Game over pin-code changed Please restart the game</h1>";
+        GUIDE.style.background = "gold";
+      break;
+
+      case 8:
+        GUIDE.lastElementChild.innerHTML="<h1>NO! Press START to Try again</h1>";
+        GUIDE.style.background = "gold";
+      break;
+
+      case 9:
+        GUIDE.lastElementChild.innerHTML="<h1>Press RESTART to play again</h1>";
+        GUIDE.style.background = "gold";
+      break;
+  
+    default:
+      break;
   }
 
-  if (message===2){
-    GUIDE.lastElementChild.innerHTML="<h1>Enter your guess number</h1>";
-    }
-  if (message===3) {
-    GUIDE.lastElementChild.innerHTML="<h1>Correct number BUT wrong place</h1>";
-    GUIDE.style.background = "yellow";
-    
-  } 
-  if(message===4){
-    GUIDE.lastElementChild.innerHTML="<h1>Wrong number </h1>";
-    GUIDE.style.background = "red";
-  } 
-  if(message===5){
-    GUIDE.lastElementChild.innerHTML="<h1>Correct number AND Correct place</h1>";
-    GUIDE.style.background = "green";
-  } 
-  
-  if(message===6){
-    GUIDE.lastElementChild.innerHTML="<h1>WE have a winner!</h1>";
-    GUIDE.style.background = "gold";
-  } 
-  
-  if(message===7){
-    GUIDE.lastElementChild.innerHTML="<h1>Game over pin-code changed Please restart the game</h1>";
-    GUIDE.style.background = "gold";
-  } 
-  if(message===8){
-    GUIDE.lastElementChild.innerHTML="<h1>NO! Press START to Try again</h1>";
-    GUIDE.style.background = "gold";
-  } 
-  if(message===9){
-    GUIDE.lastElementChild.innerHTML="<h1>Press RESTART to play again</h1>";
-    GUIDE.style.background = "gold";
-  } 
 }
 
- 
 

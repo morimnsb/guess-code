@@ -12,7 +12,7 @@
 <body>
   
   
-    <div class="container shadow-lg h-25 text-center  " id="main">    
+    <div class="container shadow-lg  text-center  " id="main">    
 
         <!-- screen to show the numbers -->
         <div class="display row justify-content-around" >  
@@ -25,21 +25,21 @@
           <div></div>
         </div>
         <!-- keyboard for get numbers -->
-        <div class="keyBoard row justify-content-center  ">
+        <div class="keyboard row justify-content-center  ">
           
-            <button type="button" onclick="startGame(this)" id = "1" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2 " >1</button>
-            <button type="button" onclick="startGame(this)" id = "2" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4  fs-2">2</button>
-            <button type="button" onclick="startGame(this)" id = "3" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2" >3</button>
-            <button type="button" onclick="startGame(this)" id = "4" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2 ">4</button>
-            <button type="button" onclick="startGame(this)" id = "5" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">5</button>
-            <button type="button" onclick="startGame(this)" id = "6" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">6</button>
-            <button type="button" onclick="startGame(this)" id = "7" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2 ">7</button>
-            <button type="button" onclick="startGame(this)" id = "8" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">8</button>
-            <button type="button" onclick="startGame(this)" id = "9" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">9</button>
+            <button type="button" onclick="startGame(this)" id = "1" class="keyboard-btn btn btn-primary  border border-3 col-4 fs-2 " >1</button>
+            <button type="button" onclick="startGame(this)" id = "2" class="keyboard-btn btn btn-primary  border border-3 col-4  fs-2">2</button>
+            <button type="button" onclick="startGame(this)" id = "3" class="keyboard-btn btn btn-primary  border border-3 col-4 fs-2" >3</button>
+            <button type="button" onclick="startGame(this)" id = "4" class="keyboard-btn btn btn-primary  border border-3 col-4 fs-2 ">4</button>
+            <button type="button" onclick="startGame(this)" id = "5" class="keyboard-btn btn btn-primary  border border-3 col-4 fs-2">5</button>
+            <button type="button" onclick="startGame(this)" id = "6" class="keyboard-btn btn btn-primary border border-3 col-4 fs-2">6</button>
+            <button type="button" onclick="startGame(this)" id = "7" class="keyboard-btn btn btn-primary  border border-3 col-4 fs-2 ">7</button>
+            <button type="button" onclick="startGame(this)" id = "8" class="keyboard-btn btn btn-primary  border border-3 col-4 fs-2">8</button>
+            <button type="button" onclick="startGame(this)" id = "9" class="keyboard-btn btn btn-primary  border border-3 col-4 fs-2">9</button>
             
-            <button type="button" onclick="startGame(this)" id = "*" class="keyboard-btn btn btn-info btn-lg border border-3 col-4 fs-2 ">*</button>
-            <button type="button" onclick="startGame(this)" id = "0" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2">0</button>
-            <button type="button" onclick="startGame(this)" id = "#" class="keyboard-btn btn btn-info btn-lg border border-3 col-4 fs-2">#</button>   
+            <button type="button" class="keyboard-btn btn btn-danger btn-lg border border-3 col-4 fs-2" onclick="startGame(this)" id="1000">Start</button>
+            <button type="button" class="keyboard-btn btn btn-primary btn-lg border border-3 col-4 fs-2"onclick="startGame(this)" id = "0"  >0</button>
+            <button type="button" class="keyboard-btn btn btn-danger btn-lg border border-3 col-4 fs-2" onclick="resetGame(this)" id="2000">Restart</button>   
       </div>
 
       <!-- Coins section -->
@@ -52,10 +52,6 @@
           <div class="coin " id="666"  onclick="startGame(this)"></div>
       </div>
 
-      <!-- start and restart buttons -->
-     
-      <button type="button" class="btn btn-primary btn-lg" onclick="startGame(this)" id="1000">Start</button>
-      <button type="button" class="btn btn-primary btn-lg" onclick="resetGame(this)" id="2000">Restart</button>
     </div>
     
     
