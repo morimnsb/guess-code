@@ -165,9 +165,9 @@ function resetGame() {
 
 //  this function prepare the round game
 function prepareDesk(){
-  for (let item of MONITOR) {
-    item.style.background = "white";
-  }
+  // for (let item of MONITOR) {
+  //   item.style.background = "white";
+  // }
   
   trueGuess = 0;
   visualMonitorList = [];
